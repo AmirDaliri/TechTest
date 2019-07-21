@@ -34,7 +34,7 @@ extension ApiRouter {
     enum Service: URLRequestConvertible {
         
         case healt
-        case getQuestions(limite:Int, offset: Int, filter: String)
+        case getQuestions(limite:Int, offset: Int, filter: String?)
         case getQuestionWithId(id: String)
         case createQuestion(question: Question)
         case updateQuestion(question: UpdateQuestionModel)
@@ -67,7 +67,10 @@ extension ApiRouter {
                     
                     
                 case .getQuestions(let limite, let offset, let filter):
-                    let params: [String: AnyObject] = ["limite": limite as AnyObject, "offset": offset as AnyObject, "filter": filter as AnyObject]
+                    var params: [String: AnyObject] = ["limite": limite as AnyObject, "offset": offset as AnyObject]
+                    if let q = filter {
+                        params["filter"] = q as AnyObject
+                    }
                     return (Uri.getQuestions.EndPoints, params)
                     
                 case .getQuestionWithId(let id):
@@ -117,9 +120,9 @@ extension ApiRequest {
         }
     }
 
-    func getQuestions(limite: Int, offset: Int, filter: String, _ completionHandler: @escaping ([Question]?, Error?) -> Void) {
+    func getQuestions(limite: Int, offset: Int, filter: String?, _ completionHandler: @escaping ([QuestionsList]?, Error?) -> Void) {
         
-        DefaultAlamofireManager.sharedManager.request(ApiRouter.Service.getQuestions(limite: limite, offset: offset, filter: filter)).validate().responseArray(completionHandler: { (response: DataResponse<[Question]>) in
+        DefaultAlamofireManager.sharedManager.request(ApiRouter.Service.getQuestions(limite: limite, offset: offset, filter: filter)).validate().responseArray(completionHandler: { (response: DataResponse<[QuestionsList]>) in
             
             switch response.result {
                 
