@@ -21,6 +21,9 @@
 		2951A0ED22E52B7000A24986 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0EC22E52B7000A24986 /* LaunchScreenViewController.swift */; };
 		2951A0EF22E52B7A00A24986 /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0EE22E52B7A00A24986 /* LaunchScreenViewModel.swift */; };
 		2951A0F222E52BB700A24986 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0F122E52BB700A24986 /* SwiftSpinner.swift */; };
+		2951A0F522E5321E00A24986 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0F422E5321E00A24986 /* Reachability.swift */; };
+		2951A0F722E5328200A24986 /* NetworkPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0F622E5328200A24986 /* NetworkPopUpVC.swift */; };
+		2951A0F922E5329400A24986 /* NetworkPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0F822E5329400A24986 /* NetworkPopUpView.swift */; };
 		2971193B22E4FF54008B7132 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971193A22E4FF54008B7132 /* QuestionTableViewCell.swift */; };
 		2971193D22E5085A008B7132 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971193C22E5085A008B7132 /* Helpers.swift */; };
 		2971193F22E51148008B7132 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971193E22E51148008B7132 /* Extensions.swift */; };
@@ -45,6 +48,9 @@
 		2951A0EC22E52B7000A24986 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		2951A0EE22E52B7A00A24986 /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
 		2951A0F122E52BB700A24986 /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		2951A0F422E5321E00A24986 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2951A0F622E5328200A24986 /* NetworkPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPopUpVC.swift; sourceTree = "<group>"; };
+		2951A0F822E5329400A24986 /* NetworkPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPopUpView.swift; sourceTree = "<group>"; };
 		2971193A22E4FF54008B7132 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2971193C22E5085A008B7132 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		2971193E22E51148008B7132 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				293D2B2122E23C8800482462 /* LaunchScreen.storyboard */,
+				2951A0FA22E532A200A24986 /* Popup */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 				2971193C22E5085A008B7132 /* Helpers.swift */,
 				2971193E22E51148008B7132 /* Extensions.swift */,
 				2951A0F122E52BB700A24986 /* SwiftSpinner.swift */,
+				2951A0F422E5321E00A24986 /* Reachability.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -169,6 +177,15 @@
 				2951A0EE22E52B7A00A24986 /* LaunchScreenViewModel.swift */,
 			);
 			path = Intro;
+			sourceTree = "<group>";
+		};
+		2951A0FA22E532A200A24986 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				2951A0F622E5328200A24986 /* NetworkPopUpVC.swift */,
+				2951A0F822E5329400A24986 /* NetworkPopUpView.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		2971194022E51EA2008B7132 /* QuestionsList */ = {
@@ -327,12 +344,15 @@
 				293D2B3222E241D100482462 /* MainViewModel.swift in Sources */,
 				2971194322E52020008B7132 /* ChoicesCollectionViewCell.swift in Sources */,
 				2971193D22E5085A008B7132 /* Helpers.swift in Sources */,
+				2951A0F522E5321E00A24986 /* Reachability.swift in Sources */,
 				2951A0ED22E52B7000A24986 /* LaunchScreenViewController.swift in Sources */,
 				293D2B2E22E2416400482462 /* NetworkLayer.swift in Sources */,
 				2951A0EF22E52B7A00A24986 /* LaunchScreenViewModel.swift in Sources */,
 				2951A0F222E52BB700A24986 /* SwiftSpinner.swift in Sources */,
 				293D2B3022E2417700482462 /* Service.swift in Sources */,
+				2951A0F722E5328200A24986 /* NetworkPopUpVC.swift in Sources */,
 				2971193F22E51148008B7132 /* Extensions.swift in Sources */,
+				2951A0F922E5329400A24986 /* NetworkPopUpView.swift in Sources */,
 				293D2B3522E26C0C00482462 /* Question.swift in Sources */,
 				293D2B1B22E23C8600482462 /* MainViewController.swift in Sources */,
 				293D2B3A22E26DA300482462 /* Choices.swift in Sources */,
