@@ -24,6 +24,7 @@ class MainViewController: PCViewController, Layouting {
         super.viewDidLoad()
         
         // I'm Here...
+        NotificationCenter.default.addObserver(self,selector: #selector(statusManager), name: .flagsChanged, object: nil)
         setupView()
         getQuestios(query: nil)
     }
