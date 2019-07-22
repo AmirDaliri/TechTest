@@ -22,6 +22,7 @@ class LaunchScreenViewController: PCViewController, Layouting, AlertPresenting {
         super.viewDidLoad()
         
         // I'm Here...
+        NotificationCenter.default.addObserver(self,selector: #selector(statusManager), name: .flagsChanged, object: nil)
         DispatchQueue.main.async {
             SwiftSpinner.show("Checking Health...")
         }
@@ -54,5 +55,4 @@ class LaunchScreenViewController: PCViewController, Layouting, AlertPresenting {
             }
         }
     }
-    
 }
