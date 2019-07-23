@@ -22,11 +22,11 @@ class LaunchScreenViewController: PCViewController, Layouting, AlertPresenting {
         super.viewDidLoad()
         
         // I'm Here...
-        NotificationCenter.default.addObserver(self,selector: #selector(statusManager), name: .flagsChanged, object: nil)
+//        NotificationCenter.default.addObserver(self,selector: #selector(statusManager), name: .flagsChanged, object: nil)
         DispatchQueue.main.async {
             SwiftSpinner.show("Checking Health...")
         }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(7 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) {
             self.healt()
         }
     }

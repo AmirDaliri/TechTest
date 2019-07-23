@@ -24,6 +24,8 @@
 		2951A0F522E5321E00A24986 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0F422E5321E00A24986 /* Reachability.swift */; };
 		2951A0F722E5328200A24986 /* NetworkPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0F622E5328200A24986 /* NetworkPopUpVC.swift */; };
 		2951A0F922E5329400A24986 /* NetworkPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951A0F822E5329400A24986 /* NetworkPopUpView.swift */; };
+		2962E92822E7BD46004DCE3D /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2962E92722E7BD46004DCE3D /* QuestionDetailViewController.swift */; };
+		2962E92A22E7BD57004DCE3D /* QuestionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2962E92922E7BD57004DCE3D /* QuestionDetailView.swift */; };
 		2971193B22E4FF54008B7132 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971193A22E4FF54008B7132 /* QuestionTableViewCell.swift */; };
 		2971193D22E5085A008B7132 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971193C22E5085A008B7132 /* Helpers.swift */; };
 		2971193F22E51148008B7132 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2971193E22E51148008B7132 /* Extensions.swift */; };
@@ -51,6 +53,8 @@
 		2951A0F422E5321E00A24986 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2951A0F622E5328200A24986 /* NetworkPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPopUpVC.swift; sourceTree = "<group>"; };
 		2951A0F822E5329400A24986 /* NetworkPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPopUpView.swift; sourceTree = "<group>"; };
+		2962E92722E7BD46004DCE3D /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
+		2962E92922E7BD57004DCE3D /* QuestionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailView.swift; sourceTree = "<group>"; };
 		2971193A22E4FF54008B7132 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		2971193C22E5085A008B7132 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		2971193E22E51148008B7132 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -125,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2951A0F322E52BD100A24986 /* Intro */,
-				2971194022E51EA2008B7132 /* QuestionsList */,
+				2971194022E51EA2008B7132 /* Questions */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,14 +192,32 @@
 			path = Popup;
 			sourceTree = "<group>";
 		};
-		2971194022E51EA2008B7132 /* QuestionsList */ = {
+		2962E92622E7BD25004DCE3D /* List */ = {
 			isa = PBXGroup;
 			children = (
 				293D2B1A22E23C8600482462 /* MainViewController.swift */,
 				293D2B3122E241D100482462 /* MainViewModel.swift */,
 				2971194122E51EB5008B7132 /* Cell */,
 			);
-			path = QuestionsList;
+			path = List;
+			sourceTree = "<group>";
+		};
+		2962E92B22E7D290004DCE3D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2962E92722E7BD46004DCE3D /* QuestionDetailViewController.swift */,
+				2962E92922E7BD57004DCE3D /* QuestionDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2971194022E51EA2008B7132 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				2962E92622E7BD25004DCE3D /* List */,
+				2962E92B22E7D290004DCE3D /* Detail */,
+			);
+			path = Questions;
 			sourceTree = "<group>";
 		};
 		2971194122E51EB5008B7132 /* Cell */ = {
@@ -353,8 +375,10 @@
 				2951A0F722E5328200A24986 /* NetworkPopUpVC.swift in Sources */,
 				2971193F22E51148008B7132 /* Extensions.swift in Sources */,
 				2951A0F922E5329400A24986 /* NetworkPopUpView.swift in Sources */,
+				2962E92822E7BD46004DCE3D /* QuestionDetailViewController.swift in Sources */,
 				293D2B3522E26C0C00482462 /* Question.swift in Sources */,
 				293D2B1B22E23C8600482462 /* MainViewController.swift in Sources */,
+				2962E92A22E7BD57004DCE3D /* QuestionDetailView.swift in Sources */,
 				293D2B3A22E26DA300482462 /* Choices.swift in Sources */,
 				293D2B1922E23C8600482462 /* AppDelegate.swift in Sources */,
 			);
