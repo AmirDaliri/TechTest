@@ -85,7 +85,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        _ = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as! QuestionTableViewCell
+        let detailVC = QuestionDetailViewController()
+        detailVC.questionId = self.questions[indexPath.row].id
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }
