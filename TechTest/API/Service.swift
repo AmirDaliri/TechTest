@@ -75,7 +75,7 @@ extension ApiRouter {
                     
                 case .getQuestionWithId(let id):
                     let params: [String: AnyObject] = ["id": id as AnyObject]
-                    return (Uri.getQuestionWithId.EndPoints, params)
+                    return ("questions/\(id)", params)
 
                 case .createQuestion(let question):
                     let params = question.toJSON() as [String : AnyObject]
@@ -136,9 +136,9 @@ extension ApiRequest {
         })
     }
     
-    func getQuestionDetail(id: String, _ completionHandler: @escaping (Question?, Error?) -> Void) {
-        
-        DefaultAlamofireManager.sharedManager.request(ApiRouter.Service.getQuestionWithId(id: id)).validate().responseObject { (response: DataResponse<Question>) in
+    func getQuestionDetail(id: String, _ completionHandler: @escaping (QuestionsList?, Error?) -> Void) {
+//        let params: [String: AnyObject] = ["id": id as AnyObject]
+        DefaultAlamofireManager.sharedManager.request(ApiRouter.Service.getQuestionWithId(id: id)).validate().responseObject { (response: DataResponse<QuestionsList>) in
             switch response.result {
                 
             case .success(let result):
@@ -147,6 +147,8 @@ extension ApiRequest {
             case .failure(let err):
                 completionHandler(nil, err)
             }
+            }.responseJSON { res in
+                print(res)
         }
     }
     

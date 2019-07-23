@@ -57,6 +57,7 @@ class QuestionTableViewCell: PCTableViewCell {
     override func setupViews() {
         super.setupViews()
         
+        self.accessoryType = .disclosureIndicator
         addSubview(questionLabel)
         addSubview(questionImageView)
         addSubview(dateLabel)
